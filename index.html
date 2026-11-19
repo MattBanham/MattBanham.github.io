@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Matt Banham — Work</title>
+  <meta name="description" content="Agent tooling, living simulations, trading systems, games and hardware — selected work by Matt Banham.">
+  <meta property="og:title" content="Matt Banham — Work">
+  <meta property="og:description" content="Agent tooling, living simulations, trading systems, games and hardware.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%2316150f'/%3E%3Crect x='3' y='3' width='3' height='3' fill='%23e2471b'/%3E%3Crect x='6.5' y='6.5' width='3' height='3' fill='%23f4f1ea'/%3E%3Crect x='10' y='3' width='3' height='3' fill='%23f4f1ea'/%3E%3Crect x='3' y='10' width='3' height='3' fill='%23f4f1ea'/%3E%3Crect x='10' y='10' width='3' height='3' fill='%23f4f1ea'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#work">Skip to work</a>
+
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Home">
+      <span class="glyph" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+      <span>MB</span>
+    </a>
+    <nav aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#lab">Lab</a>
+      <a href="#index">Index</a>
+      <a href="#stack">Stack</a>
+    </nav>
+    <button class="theme" id="themeToggle" type="button" aria-label="Toggle colour theme">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v3M12 20v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1 12h3M20 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+    </button>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <canvas id="life" aria-hidden="true"></canvas>
+      <div class="hero-inner">
+        <p class="eyebrow"><span class="dot"></span> Building in public · 2026</p>
+        <h1>I build <em>control surfaces</em> for AI agents, worlds that <em>evolve</em> on their own, and software that runs close to the metal.</h1>
+        <p class="lede">Swift, Rust, TypeScript, Python, C++ and GDScript — from notarised macOS apps and MCP servers to cellular-life simulations, trading research stacks, Godot games and servo-driven robots.</p>
+        <div class="cta">
+          <a class="btn primary" href="#work">See selected work</a>
+          <a class="btn" href="https://github.com/MattBanham" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            github.com/MattBanham
+          </a>
+        </div>
+        <p class="hint">↳ The grid behind this text is Conway's Life. Move your cursor to seed it.</p>
+      </div>
+    </section>
+
+    <!-- DOMAINS STRIP -->
+    <section class="strip" aria-label="Areas of work">
+      <div><b>01</b> Agent infrastructure</div>
+      <div><b>02</b> Artificial life</div>
+      <div><b>03</b> Market systems</div>
+      <div><b>04</b> Games</div>
+      <div><b>05</b> Hardware &amp; native</div>
+    </section>
+
+    <!-- FEATURED -->
+    <section id="work" class="section">
+      <header class="sec-head">
+        <p class="num">§ 1</p>
+        <h2>Selected work</h2>
+        <p class="sec-sub">The Orqara stack: a family of tools that let AI coding agents work on a real machine — visibly, with permissions, and together.</p>
+      </header>
+
+      <article class="feature feature-lg">
+        <div class="feature-copy">
+          <p class="kicker">macOS · Swift · Early Access</p>
+          <h3>Arc</h3>
+          <p>A native macOS control surface for AI coding assistants. Arc puts live agent activity in the menu bar and notch, jumps you back to the right conversation, manages per-folder permissions, and lets connected agents collaborate through rooms, messages, tasks, handoffs and resource reservations.</p>
+          <ul class="facts">
+            <li>Developer ID signed, Apple-notarised, Sparkle auto-updates</li>
+            <li>Ships a frozen Python MCP runtime and native helpers — no setup for users</li>
+            <li>Apple Silicon, macOS 14+</li>
+          </ul>
+          <div class="tags"><span>Swift</span><span>SwiftUI</span><span>MCP</span><span>Sparkle</span></div>
+          <a class="link" href="https://orqara.com" target="_blank" rel="noopener">orqara.com ↗</a>
+        </div>
+        <div class="feature-art" aria-hidden="true">
+          <div class="mock-mac">
+            <div class="mock-bar"><span></span><span></span><span></span><b>Arc</b></div>
+            <div class="mock-notch"><i></i> 3 agents working</div>
+            <div class="mock-rows">
+              <div><i class="ok"></i><span>refactor-auth</span><em>editing 4 files</em></div>
+              <div><i class="busy"></i><span>docs-sync</span><em>waiting · handoff</em></div>
+              <div><i class="ok"></i><span>test-runner</span><em>142 passed</em></div>
+              <div><i class="lock"></i><span>~/Code/api</span><em>read-only</em></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <div class="feature-grid">
+        <article class="feature">
+          <p class="kicker">Control plane · TypeScript</p>
+          <h3>Orqara</h3>
+          <p>A runtime-agnostic control plane for personal and team agent systems. The <b>Kernel</b> owns truth — tasks, approvals, queues, retries, lineage and verification — while <b>adapters</b> execute on Codex, OpenClaw, Hermes, direct LLM calls or shell. It keeps working even when a runtime breaks.</p>
+          <div class="tags"><span>TypeScript</span><span>Control API</span><span>iOS</span><span>macOS</span></div>
+        </article>
+        <article class="feature">
+          <p class="kicker">Security · MCP server</p>
+          <h3>Orqara Guard</h3>
+          <p>A standalone vulnerability analysis engine with a stdio MCP server and JSON CLI. Discovers manifests across a dozen ecosystems, matches with OSV-Scanner, de-duplicates GHSA/CVE aliases, and enriches with CISA KEV and FIRST EPSS — reporting failures honestly instead of treating them as safe.</p>
+          <div class="tags"><span>OSV</span><span>CISA KEV</span><span>EPSS</span><span>MCP</span></div>
+        </article>
+        <article class="feature">
+          <p class="kicker">Python · MCP</p>
+          <h3>Arc MCP</h3>
+          <p>A deliberately constrained MCP server that lets an assistant inspect only explicitly authorised folders — bounded reads, literal search, Git status/diff — with file and Git mutations gated per workspace and arbitrary execution behind an explicit Full Access switch.</p>
+          <div class="tags"><span>Python</span><span>MCP</span><span>Git</span><span>Sandboxing</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- LAB -->
+    <section id="lab" class="section lab">
+      <header class="sec-head">
+        <p class="num">§ 2</p>
+        <h2>The lab <span class="live">● live</span></h2>
+        <p class="sec-sub">Artificial-life experiments, each a single self-contained HTML file with zero dependencies. They run right here — pick one.</p>
+      </header>
+
+      <div class="lab-layout">
+        <ol class="lab-list" id="labList"></ol>
+        <div class="lab-stage">
+          <div class="stage-bar">
+            <span id="stageTitle">Biosphere</span>
+            <span class="stage-actions">
+              <button type="button" id="stageLoad" class="btn small primary">Run simulation</button>
+              <a id="stageOpen" class="btn small" href="demos/cellular-life/v6.html" target="_blank" rel="noopener">Full screen ↗</a>
+            </span>
+          </div>
+          <div class="stage-frame" id="stageFrame">
+            <div class="stage-poster" id="stagePoster">
+              <p id="stageDesc"></p>
+              <p class="mono small">Simulations load on demand to keep this page light.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INDEX -->
+    <section id="index" class="section">
+      <header class="sec-head">
+        <p class="num">§ 3</p>
+        <h2>Index of projects</h2>
+        <p class="sec-sub">Everything else — shipped, in progress, and the experiments that taught me something.</p>
+      </header>
+      <div class="filters" role="toolbar" aria-label="Filter projects" id="filters"></div>
+      <div class="index-grid" id="indexGrid"></div>
+    </section>
+
+    <!-- STACK -->
+    <section id="stack" class="section">
+      <header class="sec-head">
+        <p class="num">§ 4</p>
+        <h2>Toolbox</h2>
+      </header>
+      <div class="stack">
+        <div><h4>Languages</h4><p>Swift · Rust · TypeScript · Python · C++ · C# · GDScript · Lua · JavaScript</p></div>
+        <div><h4>Platforms</h4><p>macOS (AppKit/SwiftUI) · iOS · Electron · Web · webOS · Godot · Unity · ESP32/Arduino</p></div>
+        <div><h4>Systems</h4><p>MCP servers · microservices · PostgreSQL · Kafka · WebSockets · Docker · GCS</p></div>
+        <div><h4>Graphics &amp; ML</h4><p>Three.js · WebGL · p5.js · Canvas · PyTorch · YOLOv8 · TTS / voice cloning</p></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact">
+      <h2>Let's build something <em>strange and useful.</em></h2>
+      <div class="cta">
+        <a class="btn primary" href="https://github.com/MattBanham" target="_blank" rel="noopener">Follow on GitHub</a>
+        <a class="btn" href="https://orqara.com" target="_blank" rel="noopener">Orqara ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>© <span id="year">2026</span> Matt Banham</span>
+    <span class="mono">Hand-built · no framework · hosted on GitHub Pages</span>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>
