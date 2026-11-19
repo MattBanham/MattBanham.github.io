@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/demos.css">
 </head>
 <body>
   <a class="skip" href="#work">Skip to work</a>
@@ -65,7 +66,7 @@
       <header class="sec-head">
         <p class="num">§ 1</p>
         <h2>Selected work</h2>
-        <p class="sec-sub">The Orqara stack: a family of tools that let AI coding agents work on a real machine — visibly, with permissions, and together.</p>
+        <p class="sec-sub">Products I've founded and shipped: VoiceScript, and the Orqara stack — tools that let AI coding agents work on a real machine, visibly, with permissions, and together.</p>
       </header>
 
       <article class="feature feature-lg">
@@ -81,17 +82,27 @@
           <div class="tags"><span>Swift</span><span>SwiftUI</span><span>MCP</span><span>Sparkle</span></div>
           <a class="link" href="https://orqara.com" target="_blank" rel="noopener">orqara.com ↗</a>
         </div>
-        <div class="feature-art" aria-hidden="true">
-          <div class="mock-mac">
-            <div class="mock-bar"><span></span><span></span><span></span><b>Arc</b></div>
-            <div class="mock-notch"><i></i> 3 agents working</div>
-            <div class="mock-rows">
-              <div><i class="ok"></i><span>refactor-auth</span><em>editing 4 files</em></div>
-              <div><i class="busy"></i><span>docs-sync</span><em>waiting · handoff</em></div>
-              <div><i class="ok"></i><span>test-runner</span><em>142 passed</em></div>
-              <div><i class="lock"></i><span>~/Code/api</span><em>read-only</em></div>
-            </div>
-          </div>
+        <div class="feature-art">
+          <div data-demo="arc"></div>
+        </div>
+      </article>
+
+      <article class="feature feature-lg feature-flip">
+        <div class="feature-copy">
+          <p class="kicker">AI narration · Live</p>
+          <h3>VoiceScript</h3>
+          <p>An AI narration platform for creators. Paste a script and it becomes a manuscript — names, directions, tags and pauses parsed into tracked lines — then renders through GPU workers into studio-quality voiceovers. Design a voice from a description, cast it to a character, and re-render only the lines that changed.</p>
+          <ul class="facts">
+            <li>Voice cloning, voice design and a reusable voice library</li>
+            <li>Smart chunking with change-aware selective re-render</li>
+            <li>Viseme worker for lip-synced character animation and FCPXML export</li>
+            <li>Billing, plans and usage quotas built into the workflow</li>
+          </ul>
+          <div class="tags"><span>Next.js</span><span>FastAPI</span><span>RunPod GPU</span><span>Postgres</span><span>Stripe</span></div>
+          <a class="link" href="https://voicescript.com" target="_blank" rel="noopener">voicescript.com ↗</a>
+        </div>
+        <div class="feature-art">
+          <div data-demo="voicescript"></div>
         </div>
       </article>
 
@@ -186,5 +197,6 @@
   </footer>
 
   <script src="assets/main.js"></script>
+  <script src="assets/demos.js" defer></script>
 </body>
 </html>

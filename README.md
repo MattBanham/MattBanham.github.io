@@ -4,6 +4,7 @@ Portfolio site for github.com/MattBanham. Static HTML/CSS/JS — no build step.
 
 - `index.html` — the page
 - `assets/` — styles and script (project list lives in `assets/main.js`)
+- `assets/demos.js` / `demos.css` + `images/projects/` — the Arc and VoiceScript demos, bundled from the matt-os site (`matt-os-portfolio-refresh-20261031/src/site/ArcPreview.tsx`, `VoiceScriptPreview.tsx`) with esbuild
 - `demos/` — self-contained copies of Cellular Life v1–v6 and Evolving Code, embedded live in the Lab section
 
 ## Deploy on GitHub Pages

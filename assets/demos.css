@@ -1,0 +1,667 @@
+/* Arc and VoiceScript demos — copied from the matt-os site (src/site/site.css) */
+:root { --dim: var(--muted); }
+/* Arc's agent panel on the Arc project page (see ArcPreview.tsx) */
+
+.mos-arc {
+  max-width: 530px;
+  margin: 40px auto 0;
+}
+
+.mos-arc-panel {
+  position: relative;
+  overflow: hidden;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 26px;
+  background: #050607;
+  box-shadow: 0 24px 90px -30px rgba(0, 0, 0, 0.95), 0 0 55px -42px rgba(44, 225, 198, 0.35);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.mos-arc-notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 96px;
+  height: 7px;
+  transform: translateX(-50%);
+  border-radius: 0 0 12px 12px;
+  background: #000;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.mos-arc-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px 10px;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.mos-arc-live {
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #45df9d;
+}
+
+.mos-arc-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mos-arc-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  padding: 14px 16px;
+  border: 1px solid #242527;
+  border-radius: 19px;
+  background: #101112;
+}
+
+.mos-arc-sprite {
+  display: block;
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+}
+
+.mos-arc-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.mos-arc-name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 8px;
+}
+
+.mos-arc-name strong {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+
+.mos-arc-name span {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.mos-arc-name i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #30d86b;
+}
+
+.mos-arc-status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  margin-top: 6px;
+}
+
+.mos-arc-status b {
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.mos-arc-status span {
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.mos-arc-open {
+  align-self: flex-start;
+  font-size: 16px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.mos-arc-foot {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 12px 4px;
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.mos-arc figcaption {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 11px;
+  line-height: 20px;
+  color: var(--dim);
+}
+
+@media (max-width: 520px) {
+  .mos-arc-row {
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .mos-arc-sprite {
+    width: 44px;
+    height: 44px;
+  }
+
+  .mos-arc-name strong {
+    font-size: 14px;
+  }
+}
+
+/* VoiceScript demo on the VoiceScript project page (see VoiceScriptPreview.tsx).
+   Colours come from VS_THEMES as --vs-* variables on .vs-win. */
+
+.mos-vs {
+  max-width: 600px;
+  margin: 40px auto 0;
+}
+
+.vs-win {
+  display: grid;
+  grid-template-rows: 34px 32px 294px 40px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  background: var(--vs-paper);
+  color: var(--vs-ink);
+  box-shadow: 0 24px 90px -30px rgba(0, 0, 0, 0.95);
+  font-family: -apple-system, BlinkMacSystemFont, 'IBM Plex Sans', 'Segoe UI', sans-serif;
+  letter-spacing: normal;
+  text-transform: none;
+  transition: background 0.3s, color 0.3s;
+  --vs-serif: 'Iowan Old Style', Newsreader, Georgia, serif;
+  --vs-mono: ui-monospace, 'IBM Plex Mono', SFMono-Regular, Menlo, monospace;
+}
+
+.vs-bar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 10px 0 14px;
+  border-bottom: 1px solid var(--vs-rule);
+  background: var(--vs-paper2);
+}
+
+.vs-bar > i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--vs-rule2);
+}
+
+.vs-title {
+  margin-left: 10px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--vs-ink2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.vs-title b {
+  font-weight: 600;
+  color: var(--vs-ink);
+}
+
+.vs-rec {
+  flex-shrink: 0;
+  width: 7px;
+  height: 7px;
+  margin-left: auto;
+  border-radius: 50%;
+  background: var(--vs-ink4);
+}
+
+.vs-rec.on {
+  background: var(--vs-signal);
+  box-shadow: 0 0 0 4px var(--vs-signalSoft);
+}
+
+.vs-theme {
+  display: inline-flex;
+  flex-shrink: 0;
+  margin-left: 8px;
+  border: 1px solid var(--vs-rule2);
+  border-radius: 999px;
+  padding: 2px;
+}
+
+.vs-theme button {
+  padding: 2px 9px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--vs-ink3);
+  font: 500 9px var(--vs-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.vs-theme button[aria-pressed='true'] {
+  background: var(--vs-ink);
+  color: var(--vs-paper);
+}
+
+.vs-theme button:focus-visible {
+  outline: 2px solid var(--vs-signal);
+  outline-offset: 1px;
+}
+
+.vs-tabs {
+  display: flex;
+  gap: 18px;
+  padding: 0 18px;
+  border-bottom: 1px solid var(--vs-rule);
+}
+
+.vs-tabs span {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid transparent;
+  color: var(--vs-ink3);
+  font: 500 10px var(--vs-mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.vs-tabs span.on {
+  border-color: var(--vs-signal);
+  color: var(--vs-ink);
+}
+
+.vs-tabs .vs-meta {
+  margin-left: auto;
+  border: 0;
+  color: var(--vs-ink3);
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.vs-main {
+  position: relative;
+  overflow: hidden;
+}
+
+.vs-view {
+  position: absolute;
+  inset: 0;
+  padding: 14px 18px;
+}
+
+.vs-foot {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 18px;
+  border-top: 1px solid var(--vs-rule);
+  color: var(--vs-ink3);
+  font: 10px var(--vs-mono);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.vs-foot b {
+  font-weight: 600;
+  color: var(--vs-ink);
+}
+
+.vs-label {
+  color: var(--vs-ink3);
+  font: 500 9px var(--vs-mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.vs-ms {
+  display: grid;
+  gap: 8px;
+}
+
+.vs-line {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) 62px;
+  align-items: start;
+  min-height: 32px;
+}
+
+.vs-line.playing {
+  background: linear-gradient(90deg, transparent, var(--vs-signalSoft) 8%, var(--vs-signalSoft) 92%, transparent);
+}
+
+.vs-gut {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding-top: 3px;
+  color: var(--vs-ink4);
+  font: 10px var(--vs-mono);
+}
+
+.vs-gut .hot {
+  color: var(--vs-signal);
+}
+
+.vs-mark {
+  font-size: 9px;
+  color: var(--vs-ink4);
+}
+
+.vs-mark.rendering {
+  color: var(--vs-signal);
+}
+
+.vs-mark.done {
+  color: var(--vs-ink2);
+}
+
+.vs-src {
+  color: var(--vs-ink2);
+  font: 11px/1.55 var(--vs-mono);
+  white-space: pre-wrap;
+}
+
+.vs-src .vs-name {
+  font-weight: 600;
+  color: var(--rc);
+}
+
+.vs-src .vs-dir {
+  color: var(--vs-ink3);
+}
+
+.vs-src .vs-tag {
+  color: var(--vs-signal);
+}
+
+.vs-caret {
+  display: inline-block;
+  width: 6px;
+  height: 12px;
+  margin-left: 1px;
+  background: var(--vs-signal);
+  vertical-align: -2px;
+}
+
+.vs-line.voiced .vs-body {
+  padding-left: 10px;
+  border-left: 2px solid var(--rc);
+}
+
+.vs-cue {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  margin-bottom: 1px;
+  color: var(--rc);
+  font: 600 9px var(--vs-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.vs-cue em {
+  color: var(--vs-ink3);
+  font: italic 400 11px var(--vs-serif);
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.vs-text {
+  color: var(--vs-ink);
+  font: 14px/1.45 var(--vs-serif);
+}
+
+.vs-text .ahead {
+  color: var(--vs-ink4);
+}
+
+.vs-text .now {
+  text-decoration: underline 2px var(--vs-signal);
+  text-underline-offset: 4px;
+}
+
+.vs-ptag {
+  margin-right: 6px;
+  padding: 0 4px;
+  border: 1px solid var(--vs-signal);
+  border-radius: 3px;
+  color: var(--vs-signal);
+  font: 9px var(--vs-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  vertical-align: 2px;
+}
+
+.vs-pause {
+  margin-top: 2px;
+  color: var(--vs-ink4);
+  font: 9px var(--vs-mono);
+  letter-spacing: 0.06em;
+}
+
+.vs-gr {
+  display: grid;
+  justify-items: end;
+  padding-top: 2px;
+  color: var(--vs-ink3);
+  font: 9.5px/1.6 var(--vs-mono);
+}
+
+.vs-gr .red {
+  color: var(--vs-signal);
+}
+
+.vs-gr .ok {
+  color: var(--vs-ok);
+}
+
+.vs-chips {
+  display: flex;
+  gap: 6px;
+}
+
+.vs-chip {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  padding: 2px 9px;
+  border: 1px solid var(--vs-rule2);
+  border-radius: 999px;
+  color: var(--vs-ink2);
+}
+
+.vs-chip i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--rc);
+}
+
+.vs-chip b {
+  font-weight: 600;
+  color: var(--vs-ink);
+}
+
+.vs-strip {
+  display: flex;
+  flex: 1;
+  gap: 2px;
+}
+
+.vs-strip i {
+  flex: 1;
+  height: 10px;
+  border-radius: 1px;
+  background: var(--vs-paper3);
+}
+
+.vs-strip i.done {
+  background: var(--vs-ink3);
+}
+
+.vs-strip i.now {
+  background: var(--vs-signal);
+}
+
+.vs-cast {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 176px;
+  gap: 18px;
+  height: 100%;
+}
+
+.vs-describe {
+  min-height: 38px;
+  margin: 6px 0 12px;
+  color: var(--vs-ink);
+  font: italic 13px/1.4 var(--vs-serif);
+}
+
+.vs-take {
+  display: grid;
+  grid-template-columns: 46px 1fr auto;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 4px;
+  padding: 4px 8px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+}
+
+.vs-take.kept {
+  border-color: var(--vs-owen);
+  background: var(--vs-paper2);
+}
+
+.vs-wave {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  height: 22px;
+}
+
+.vs-wave i {
+  flex: 1;
+  border-radius: 1px;
+  background: var(--vs-ink4);
+}
+
+.vs-take.live .vs-wave i {
+  background: var(--vs-ink3);
+}
+
+.vs-take.kept .vs-wave i {
+  background: var(--vs-owen);
+}
+
+.vs-saved {
+  color: var(--vs-ok);
+  font: 600 9px var(--vs-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.vs-char {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  gap: 6px;
+  padding: 10px 8px 8px;
+  border: 1px solid var(--vs-rule);
+  border-radius: 10px;
+  background: var(--vs-paper2);
+}
+
+.vs-char .vs-cue {
+  margin: 0;
+}
+
+.vs-sprite {
+  position: relative;
+  width: 132px;
+  aspect-ratio: 360 / 387;
+}
+
+.vs-sprite img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.vs-say {
+  color: var(--vs-ink4);
+  font: 13px/1.35 var(--vs-serif);
+  text-align: center;
+}
+
+.vs-say .said {
+  color: var(--vs-ink);
+}
+
+.vs-shapes {
+  display: flex;
+  gap: 3px;
+  color: var(--vs-ink4);
+  font: 9px var(--vs-mono);
+}
+
+.vs-shapes .on {
+  color: var(--vs-signal);
+  font-weight: 600;
+}
+
+.mos-vs figcaption {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 11px;
+  line-height: 20px;
+  color: var(--dim);
+}
+
+@media (max-width: 560px) {
+  .vs-win {
+    grid-template-rows: 34px 32px 310px 40px;
+  }
+
+  .vs-title {
+    display: none;
+  }
+
+  .vs-cast {
+    grid-template-columns: minmax(0, 1fr) 128px;
+    gap: 10px;
+  }
+
+  .vs-sprite {
+    width: 104px;
+  }
+
+  .vs-tabs .vs-meta,
+  .vs-foot > span:first-child:not(.vs-label) {
